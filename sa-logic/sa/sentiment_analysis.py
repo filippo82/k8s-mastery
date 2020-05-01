@@ -5,7 +5,7 @@ from flask_cors import CORS
 import sys
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 # logging.basicConfig(level=logging.DEBUG)
 
@@ -21,4 +21,7 @@ def analyse_sentiment():
     )
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(port=5000, debug=True)
+
+# curl -i -X POST -H 'Content-Type: application/json' -d '{"sentence": "Awesome"}' localhost:5000/sentiment

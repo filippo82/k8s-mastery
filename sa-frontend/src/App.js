@@ -87,7 +87,7 @@ const App = () => {
 
   const analyzeSentence = (evt) => {
       evt.preventDefault();
-      fetch('sentiment', {
+      fetch('http://localhost:5000/sentiment', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
